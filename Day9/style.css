@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --img-background: https: //www.nodemy.vn/projects/html-css-js/weather-app/hot.png;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+body.hot {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1)), url(https://www.nodemy.vn/projects/html-css-js/weather-app/hot.png) no-repeat center/cover;
+}
+
+body.cold {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 1)), url(https://raw.githubusercontent.com/namndwebdev/html-css-js-thuc-chien/main/Weather%20App/cold.png) no-repeat center/cover;
+}
+
+#app {
+    min-width: 350px;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+#app.hot {
+    background-image: url(https://www.nodemy.vn/projects/html-css-js/weather-app/hot.png);
+    background-size: cover;
+}
+
+#app.cold {
+    background-image: url(https://raw.githubusercontent.com/namndwebdev/html-css-js-thuc-chien/main/Weather%20App/cold.png);
+    background-size: cover;
+}
+
+input {
+    width: 100%;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+    font-size: 19px;
+    box-shadow: 0 5px 4px rgb(0 0 0 / 20%);
+    border: none;
+    outline: none;
+    border-radius: 6px 15px 6px 15px;
+    transition: 0.5s;
+}
+
+input:focus {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px 0 15px 0;
+    transition: 0.5s;
+}
+
+.region {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.time {
+    display: flex;
+    justify-content: center;
+}
+
+.temperature {
+    font-size: 65px;
+    text-shadow: 4px 4px rgb(0 0 0 / 60%);
+    display: inline-block;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    box-shadow: 2px 2px 0 2px rgb(0 0 0 / 50%);
+    margin: 20px 45px;
+    font-weight: 800;
+}
+
+.weather {
+    color: white;
+}
+
+.parameter {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    margin: 20px 0;
+}
+
+.visibility i, .wind i, .cloud i {
+    display: block;
+    margin: 16px 0;
+}

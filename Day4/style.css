@@ -1,0 +1,98 @@
+:root {
+    --pink-color: #e26e70;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+body {}
+
+.wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+
+
+}
+
+.image {
+    width: 22%;
+    height: 200px;
+    overflow: hidden;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.image:hover img {
+    transform: scale(1.2);
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.25s;
+}
+
+.gallery {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    display: flex;
+    transition: 0.5s;
+    /* display: none; */
+}
+
+.control {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+.fa-chevron-left.hide,
+.fa-chevron-right.hide,
+.gallery.hide {
+    /* transition: 0.5s; */
+    display: none;
+}
+
+.gallery-inner {
+    width: 70%;
+    height: 70%;
+    margin: auto;
+    transition: 0.5s;
+
+}
+
+.close {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 50px;
+    top: 6px;
+    right: 6px;
+    cursor: pointer;
+
+}
